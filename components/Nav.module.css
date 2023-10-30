@@ -51,6 +51,7 @@
 @media (max-width: 830px) {
   .nav {
     justify-content: center;
+    padding-bottom: 10px;
   }
 
   .navInput {
