@@ -28,7 +28,7 @@ https://starwars-ffw.netlify.app/
 
 To run this app on your local machine, follow these steps:
 
-1. Clone this repository using `git clone https://github.com/Zemelka27/cicada-react-fe-challenge-2022.git`.
+1. Clone this repository using `git clone https://github.com/Zemelka27/starwars-ffw-next.git`.
 2. Change your current directory to the project directory using `starwars-ffw-next`.
 3. Install dependencies by running `npm install`.
 4. Run the app using `npm start`.
