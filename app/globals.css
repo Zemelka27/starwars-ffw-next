@@ -11,6 +11,7 @@ body {
 }
 
 .genericCont {
+  margin-top: 50px;
   min-height: calc(100vh - 60px);
   min-width: 100vw;
   display: flex;
@@ -27,6 +28,7 @@ body {
   pointer-events: none;
   animation: app-loading-logo infinite 1s linear;
 }
+
 
 @keyframes app-loading-logo {
   from {

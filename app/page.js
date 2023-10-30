@@ -1,4 +1,3 @@
-// TODO add responsiveness !!!!!!!
 // TODO check sizes
 
 "use client";
@@ -122,7 +121,7 @@ export default function App() {
   ));
   //------------------JSX-------------------------------------------------------------------------------
   return (
-    <div>
+    <div className="homePage">
       <Nav handleInputChange={handleInputChange} />
       <div className="genericCont">
         {loadingDataState ? (
