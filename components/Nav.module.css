@@ -1,0 +1,57 @@
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.navLogoCont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLogo {
+  margin: 5px 20px 5px 20px;
+  pointer-events: none;
+}
+
+.navTitle {
+  text-transform: uppercase;
+  color: white;
+}
+
+.navInputLabel {
+  margin-right: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navInput {
+  width: 300px;
+  margin-right: 30px;
+  padding: 10px;
+  border-radius: 100px;
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+}
+
+.navInput:focus {
+  outline: none;
+}
+
+@media (max-width: 830px) {
+  .nav {
+    justify-content: center;
+  }
+
+  .navInput {
+    margin-right: 0px;
+  }
+  
+
+}

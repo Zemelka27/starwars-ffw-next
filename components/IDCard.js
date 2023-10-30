@@ -26,18 +26,22 @@ export default function IDCard({ obj }) {
     <div className={styles.card}>
       <div className={styles.cardHeaderCont}>
         <div className={styles.cardHeaderSub}>
-          <img
+          <Image
             className={styles.cardLogo}
             src="/resistance-logo.png"
             alt="card-logo"
-          ></img>
+            width={50}
+            height={50}
+          />
           <div>Resistance ID Card</div>
         </div>
         <div>ID: {obj.created}</div>
       </div>
       <div className={styles.cardSubCont}>
         <div>
-          <label className={styles.labelTitle}>Basic Data:</label>
+          <div className={styles.labelTitleCont}>
+            <label className={styles.labelTitle}>Basic Data:</label>
+          </div>
           <ul className={styles.ulNormal}>
             <label className={styles.labelNormal}>Name:</label>
             <li className={styles.liNormal}>{obj.name}</li>
@@ -76,7 +80,9 @@ export default function IDCard({ obj }) {
               </div>
             </div>
           </ul>
-          <label className={styles.labelTitle}>Birth Planet Data:</label>
+          <div className={styles.labelTitleCont}>
+            <label className={styles.labelTitle}>Birth Planet Data:</label>
+          </div>
           {obj.planet.name ? (
             <ul className={styles.ulNormal}>
               <div className={styles.liGroup}>
@@ -133,7 +139,11 @@ export default function IDCard({ obj }) {
               <li className={styles.liNormal}>Unknown</li>
             </ul>
           )}
-          <label className={styles.labelTitle}>Associated Vehicle Data:</label>
+          <div className={styles.labelTitleCont}>
+            <label className={styles.labelTitle}>
+              Associated Vehicle Data:
+            </label>
+          </div>
           <ul className={styles.ulNormal}>
             {mergedVehicleElements[0] ? (
               mergedVehicleElements
@@ -143,11 +153,13 @@ export default function IDCard({ obj }) {
           </ul>
         </div>
         <div className={styles.cardImageCont}>
-          <img
+          <Image
             className={styles.profilePic}
             src="/profile-picture-dummy.jpg"
             alt="profile-pic"
-          ></img>
+            width={400}
+            height={400}
+          />
         </div>
       </div>
     </div>

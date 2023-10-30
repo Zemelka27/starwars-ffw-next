@@ -1,9 +1,5 @@
-// TODO Add more filters!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// TODO change readme
-// TODO Deploy
-// TODO clean css
-// TODO move nav
-// TODO change images
+// TODO add responsiveness !!!!!!!
+// TODO check sizes
 
 "use client";
 import swapi from "../lib/swapi";
@@ -11,9 +7,9 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import IDCard from "../components/IDCard";
-import styles from "./page.module.css";
+import Nav from "@/components/Nav";
 
-export default function Home() {
+export default function App() {
   //------------------States---------------------------------------------------------------------------
   const [mergedData, setMergedData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -51,6 +47,8 @@ export default function Home() {
       setMergedData(characterData);
 
       setFilteredData(characterData);
+
+      // console.log(characterData);
 
       setLoadingDataState(false);
     } catch (error) {
@@ -98,18 +96,24 @@ export default function Home() {
 
   function filterCards(input) {
     setFilteredData((prevState) => {
-      prevState = mergedData.filter(
-        (obj) =>
-          obj.name.includes(input) ||
-          obj.gender.includes(input) ||
-          obj.created.includes(input)
-      );
+      console.log(prevState);
+      prevState = mergedData.filter((obj) => {
+        let planet = obj.planet.name ? obj.planet : { name: "unknown" };
+
+        console.log(obj);
+        return (
+          obj.name.toLowerCase().includes(input) ||
+          obj.gender.toLowerCase().includes(input) ||
+          obj.created.toLowerCase().includes(input) ||
+          planet.name.toLowerCase().includes(input)
+        );
+      });
       return [...prevState];
     });
   }
 
   function handleInputChange(event) {
-    const input = event.target.value;
+    const input = event.target.value.toLowerCase();
     filterCards(input);
   }
   //------------------Dynamic-Elements------------------------------------------------------------------
@@ -119,34 +123,16 @@ export default function Home() {
   //------------------JSX-------------------------------------------------------------------------------
   return (
     <div>
-      <nav className={styles.nav}>
-        <div className={styles.navLogoCont}>
-          <img
-            className={styles.navLogo}
-            src="/resistance-logo.png"
-            alt="resistance-logo"
-          ></img>
-          <h1 className={styles.navTitle}>Resistance ID Database</h1>
-        </div>
-        <div className={styles.navInputCont}>
-          <label className={styles.navInputLabel}>Filter:</label>
-          <input
-            className={styles.navInput}
-            type="text"
-            onChange={handleInputChange}
-            placeholder="Filter IDs under a certain ID, name, planet, etc..."
-          ></input>
-        </div>
-      </nav>
+      <Nav handleInputChange={handleInputChange} />
       <div className="genericCont">
         {loadingDataState ? (
-          <div className={styles.appLoadingCont}>
-            <img
-              className={styles.appLoadingLogo}
-              src="/resistance-logo.png"
-              alt="resistance-logo"
-            ></img>
-          </div>
+          <Image
+            className="appLoadingLogo"
+            src="/resistance-logo.png"
+            alt="resistance-logo"
+            width={300}
+            height={300}
+          />
         ) : (
           <>{cards}</>
         )}
