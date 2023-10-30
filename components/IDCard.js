@@ -35,7 +35,7 @@ export default function IDCard({ obj }) {
           />
           <div>Resistance ID Card</div>
         </div>
-        <div>ID: {obj.created}</div>
+        <div className={styles.cardHeaderSub}>ID: {obj.created}</div>
       </div>
       <div className={styles.cardSubCont}>
         <div>
@@ -157,8 +157,8 @@ export default function IDCard({ obj }) {
             className={styles.profilePic}
             src="/profile-picture-dummy.jpg"
             alt="profile-pic"
-            width={400}
-            height={400}
+            width={200}
+            height={200}
           />
         </div>
       </div>

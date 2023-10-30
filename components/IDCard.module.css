@@ -1,11 +1,12 @@
 .card {
   margin: 20px;
   padding: 20px;
-  width: 1200px;
-  min-height: 947px;
-  border-radius: 10px;
+  width: 600px;
+  min-height: 640px;
+  border-radius: 5px;
   background-image: url("/resistance-background.jpg");
-  background-position: 70px;
+  background-size: cover;
+  background-position: -190px;
 }
 
 .cardHeaderCont {
@@ -14,9 +15,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  padding: 10px;
+  padding: 5px;
 
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
   color: brown;
@@ -27,11 +28,11 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .cardLogo {
-  margin-right: 20px;
+  margin-right: 10px;
   pointer-events: none;
 }
 
@@ -47,19 +48,21 @@
 
 .labelNormal {
   color: rgb(42, 157, 165);
-  padding: 10px;
-  font-size: 17px;
+  padding: 5px;
+  font-size: 10px;
 }
 
 .labelTitleCont {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .labelTitle {
   color: brown;
-  padding: 10px 10px 40px 10px;
+  padding: 5px 5px 20px 5px;
   text-transform: uppercase;
+  font-size: 12px;
+
   font-weight: 500;
 }
 
@@ -70,19 +73,19 @@
 
 .liNormal {
   list-style: none;
-  padding: 10px;
+  padding: 5px;
   margin: 0px;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 500;
   color: black;
 }
 
 .profilePic {
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-right: 10px;
-  border-radius: 8px;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  border-radius: 4px;
   opacity: 0.8;
 }
 

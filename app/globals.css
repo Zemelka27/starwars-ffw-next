@@ -2,6 +2,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* font-size: 1.4vw; */
+
 }
 
 html,
@@ -23,8 +25,8 @@ body {
 }
 
 .appLoadingLogo {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 1vw;
+  margin-right: 1vw;
   pointer-events: none;
   animation: app-loading-logo infinite 1s linear;
 }
