@@ -1,4 +1,4 @@
-# FFW Star Wars Challenge 2023
+# FFW Star Wars Challenge
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) which displays Star Wars character information in a visually appealing way.
 
